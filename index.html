@@ -11,7 +11,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js" type="text/javascript" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
-    <title>SHEE</title>
+    <title>Love Hearts</title>
 </head>
 <body class="container-fluid">
     <ul class="icons">
@@ -23,56 +23,34 @@
     </ul>
     <div class="details">
         <form >
-           Please Type Your Name: <input type="text" ng-model='name' class="border border-success rounded">
+           Please Type Your Name: <input type="text" ng-model='name' id="input" class="border border-success rounded">
         </form>
         <button class="btn btn-lg" id="btn" style="background-color: #FF1493;">{{name | uppercase}} CLICK HERE</button>
     </div>
-    <div class="main">
-        <p class="shee">{{name | capitalize}}. <img src="images/hearts.png" alt=""><br>
-        You are a blessing to me. <br>
-        I look at all the beautiful good things in life and none can compare to you. <br>
-        I may not be able to say this enough but I can show it. <br>
-        You are special to me. <br>
-        Denis cares and appreciates you. </p>
-    </div>
+   <div class="body">
+       <div class="imageleft">
+            <img src="images/hearts 2.png"> <br><br><br> <br><br>
+            <img src="images/hearts.png">
+       </div>
+         <div class="center">
+            <div class="main">
+                <p class="shee">{{name | capitalize}}.<br>
+                You are a blessing to me. <br>
+                I look at all the beautiful good things in life and none can compare to you. <br>
+                I may not be able to say this enough but I can show it. <br>
+                You are special to me. <br>
+                Denis cares and appreciates you. </p>
+            </div>
+        </div>
+        <div class="imagesright">
+            <img src="images/like.png"> <br><br><br>
+            <img src="images/like (1).png">
+        </div>
+   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
     <script src="angular.min.js"></script>
     <script src="jquery-3.4.1.js"></script>
-    <script>
-        let content;
-        let tl;
-        let audio;
-        $(document).ready(function(){
-            $('#btn').click(function(){
-                $('.shee').show();
-                // play random audio
-
-                let audio=[
-                    '../audio/Ed Sheeran - Perfect (Official Music Video) ( 160kbps ).mp3',
-                    '../audio/lewis_capaldi_someone_you_loved_lyrics_mp3_72688.mp3',
-                    '../audio/david_guetta_ft_justin_bieber_2u_the_victoria_s_secret_angels_lip_sync_mp3_28772.mp3',
-                    '../audio/mhd_bebe_feat._dadju_mp3_72720.mp3'
-                ]
-
-                let audioArray= audio[Math.floor(Math.random()*audio.length)];
-                let audioPlay=new Audio(audioArray);
-                audioPlay.play();
-
-                // page animation
-                let tl=new TimelineMax();
-                 tl.to('.shee',5,{scaleY:1, height:'70vh',opacity:1, ease: "steps(6)"})
-            });
-        });
-
-        
-
-        let app=angular.module("myApp",[]);
-        app.filter('capitalize', function(){
-            return function(input){ 
-             return(angular.isString(input) && input.length>0) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase()  : input;
-         }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

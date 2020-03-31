@@ -17,7 +17,20 @@
     border-radius: 50px;
     font-size: 25px;
 }
-
+.body {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 2rem;
+}
+.imageleft{
+    grid-column: span 1;
+}
+.center{
+    grid-column: span 8;
+}
+.imagesright{
+    grid-column: span 1;
+}
 body{
     background: linear-gradient(to left,#FFB6C1,#800080);
     text-align: center;
@@ -30,7 +43,7 @@ body{
 form{
     font-size: 1.5em;
 }
-.shee{
+.body{
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -60,6 +73,7 @@ form{
         margin: auto;
         padding-top: 10px;
         height: 100vh;
+        
     }
     form{
         font-size: 1.2em;
@@ -68,9 +82,33 @@ form{
         height: auto;
         transform: scaleY(70px);
          transform-origin: top;
+         width: 100%;
     }
     #btn{
         margin-top: 20px;
         font-size: 1em;
+    }
+    .body {
+        display: block;
+    }
+    .imageleft{
+        display:none;
+    }
+    .center{
+        width: 100%;
+    }
+    .imagesright{
+        display: none;
+    }
+    .icons{
+        position: absolute;
+    }
+    .icons li{
+        margin-right: 50px;
+        z-index: 2;
+    }
+    .details{
+        position: relative;
+        top: 35px;
     }
 }
