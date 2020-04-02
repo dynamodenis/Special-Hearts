@@ -79,14 +79,17 @@ form{
         font-size: 1.2em;
     }
     .shee{
-        height: auto;
         transform: scaleY(70px);
          transform-origin: top;
          width: 100%;
+         padding-top: 30px;
+         z-index: -1;
+         height: 100vh;
     }
     #btn{
         margin-top: 20px;
         font-size: 1em;
+        z-index: 1;
     }
     .body {
         display: block;
