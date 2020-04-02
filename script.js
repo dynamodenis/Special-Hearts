@@ -7,10 +7,11 @@
                 // play random audio
 
                 let audio=[
-                    '../audio/Ed Sheeran - Perfect (Official Music Video) ( 160kbps ).mp3',
-                    '../audio/lewis_capaldi_someone_you_loved_lyrics_mp3_72688.mp3',
-                    '../audio/david_guetta_ft_justin_bieber_2u_the_victoria_s_secret_angels_lip_sync_mp3_28772.mp3',
-                    '../audio/mhd_bebe_feat._dadju_mp3_72720.mp3'
+                     'http://62.138.24.206/tb/5/0a/david_guetta_ft_justin_bieber_2u_the_victoria_s_secret_angels_lip_sync_mp3_35257.mp3?play',
+                    'http://62.138.24.26/tb/f/5e/ed_sheeran_perfect_official_music_video_mp3_35411.mp3?play',
+                    'http://62.138.24.193/tb/4/75/lewis_capaldi_someone_you_loved_mp3_35507.mp3?play',
+                    //  'https://www.musixhub.com/details.php?t=a&a=Calum%20Scott&at=You%20Are%20The%20Reason',
+                     'http://85.25.74.152/tb/f/74/mhd_bebe_feat._dadju_mp3_35586.mp3?play'
                 ]
 
                 let audioArray= audio[Math.floor(Math.random()*audio.length)];
